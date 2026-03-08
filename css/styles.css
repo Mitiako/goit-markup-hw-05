@@ -9,12 +9,11 @@ body {
 a {text-decoration: none}
 
 h1, h2, h3, h4, h5, h6, p, ul {
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0;
 }
 
 ul {
-    padding-left: 0;
+    padding: 0;
     list-style: none;
 }
 
@@ -24,7 +23,9 @@ img {
     height: auto;
 }
 
-
+a {
+    text-decoration: none;
+}
 
 .container {
     max-width: 1158px;
@@ -604,6 +605,7 @@ box-shadow:
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 408px;
     transform: translate(-50%, -50%);
     background-color: #fcfcfc;
     padding: 72px 24px 24px;
@@ -624,11 +626,27 @@ box-shadow:
     align-items: center;
     width: 24px;
     height: 24px;
+
     background-color: #e7e9fc;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    cursor: pointer;
     border-radius: 100%;
     padding: 0;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-btn > svg {
+    fill: #2e2f42;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-btn:hover, .close-btn:focus {
+    background-color: #404bbf;
+}
+
+.close-btn:hover > svg,
+.close-btn:focus > svg {
+fill: #fff;
 }
 
 .contanct-form-title {
@@ -641,8 +659,13 @@ box-shadow:
     color: #2e2f42;
 }
 
+.form-group {
+    margin-bottom: 8px;
+}
+
 .modal-label {
-    margin-bottom: 4px;
+    display: block;
+        margin-bottom: 4px;
         font-weight: 400;
         font-size: 12px;
         line-height: 1.16667;
@@ -650,21 +673,139 @@ box-shadow:
         color: #8e8f99;
 }
 
+
 .modal-input-wrapper {
    position: relative;
 }
 
 .modal-input {
-    border: 1px solid rgba(46, 47, 66, 0.4);
-    border-radius: 4px;
     width: 100%;
     height: 40px;
+    padding-left: 38px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.modal-input:focus {
+    border-color: #4d5ae5;
+}
+
 
 .modal-input-icon {
     position: absolute;
-    top: 8%;
+    top: 50%;
     left: 16px;
-    transform: translate(-50%, -50%);
+    fill: #2e2f42;
+    transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.modal-input:focus + .modal-input-icon {
+    fill: #4d5ae5;
+}
+
+.textarea-wrapper {
+    margin-bottom: 16px;
+}
+
+.modal-textarea {
+    display: block;
+    width: 360px;
+    height: 120px;
+    padding: 8px 16px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    resize: none;
+    outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-textarea:focus {
+    border-color: #4d5ae5;
+}
+
+.modal-textarea, 
+.modal-input, 
+.modal-textarea::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 117%;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
+}
+
+.agreement-wrapper {
+    margin-bottom: 24px;
+}
+
+.modal-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 117%;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+}
+
+.checkbox-wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    margin-right: 0px;
+    border-radius: 2px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox-icon {
+    width: 10px;
+    height: 8px;
+    fill: #f4f4fd;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transform: scale(0);
+}
+
+
+.checkbox-input:checked + .modal-checkbox .checkbox-wrapper {
+    background-color: #404bbf;
+    border-color: #404bbf; 
+}
+
+.checkbox-input:checked + .modal-checkbox .checkbox-icon {
+    transform: scale(1);
+    fill: #f4f4fd;
+}
+
+.contact-form-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 169px;
+    height: 56px;
+    margin: 0 auto;
+    padding: 0;
+    border-radius: 4px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #fff;
+
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    background-color: #4d5ae5;
+    border: transparent;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-form-btn:hover,
+.contact-form-btn:focus {
+    background-color: #404bbf;
+}

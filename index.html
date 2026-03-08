@@ -517,17 +517,15 @@
     <!-- Modal -->
     <div class="modal-overlay">
       <div class="modal">
+        <button class="close-btn" type="button">
+          <svg width="8" height="8">
+            <use href="./images/icons.svg#exit"></use>
+          </svg>
+        </button>
+        <p class="contanct-form-title">
+          Leave your contacts and we will call you back
+        </p>
         <form class="contacts-form">
-          <button class="close-btn"
-          type="button">
-            <svg width="8" height="8">
-              <use href="./images/icons.svg#exit"></use>
-            </svg>
-          </button>
-          <p class="contanct-form-title">
-            Leave your contacts and we will call you back
-          </p>
-          
           <label>
             <div class="form-group">
               <label class="modal-label" for="name">Name</label>
@@ -584,15 +582,39 @@
               </div>
             </div>
 
-          <label class="modal-label" for="textarea">Comment</label>
-          <textarea name="comment" id="textarea" placeholder="Text input"></textarea>
-          <label>
-              <input type="checkbox" name="agreement" id="agreement" required />
-              <span class="checkbox-custom"></span>
-              <span>I accept the terms and conditions of the</span>
-              <a href="">Privacy Policy</a>
+            <div class="textarea-wrapper">
+              <label class="modal-label" for="textarea">Comment</label>
+              <textarea
+                class="modal-textarea"
+                name="comment"
+                id="textarea"
+                placeholder="Text input"
+              ></textarea>
+            </div>
+
+            <div class="agreement-wrapper">
+              <input
+                class="checkbox-input visually-hidden"
+                type="checkbox"
+                name="agreement"
+                id="checkbox"
+                required
+              />
+              <label for="checkbox" class="modal-checkbox">
+                <span class="checkbox-wrapper">
+                  <svg class="checkbox-icon" width="10" height="8">
+                    <use href="./images/icons.svg#check"></use>
+                  </svg>
+                </span>
+
+                <span class="checkbox-custom"></span>
+                I accept the terms and conditions of the
+                <a href="">Privacy Policy</a>
+              </label>
+            </div>
           </label>
-          <button type="submit">Send</button>
+
+          <button class="contact-form-btn" type="submit">Send</button>
         </form>
       </div>
     </div>
