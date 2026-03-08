@@ -674,7 +674,7 @@ fill: #fff;
         margin-bottom: 4px;
         font-weight: 400;
         font-size: 12px;
-        line-height: 1.16667;
+        line-height: 1.17;
         letter-spacing: 0.04em;
         color: #8e8f99;
 }
@@ -690,6 +690,8 @@ fill: #fff;
     padding-left: 38px;
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
+    outline: transparent;
+    background-color: transparent;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -724,6 +726,7 @@ fill: #fff;
     border-radius: 4px;
     resize: none;
     outline: transparent;
+    background-color: transparent;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -763,10 +766,13 @@ fill: #fff;
     justify-content: center;
     width: 16px;
     height: 16px;
-    margin-right: 0px;
-    border-radius: 2px;
     border: 1px solid rgba(46, 47, 66, 0.4);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 2px;
+    fill: transparent;
+    transition:
+        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .checkbox-icon {
@@ -781,6 +787,7 @@ fill: #fff;
 .checkbox-input:checked + .modal-checkbox .checkbox-wrapper {
     background-color: #404bbf;
     border: none;
+    fill: f4f4fd;
 }
 
 .checkbox-input:checked + .modal-checkbox .checkbox-icon {
@@ -788,10 +795,12 @@ fill: #fff;
     fill: #f4f4fd;
 }
 
+.privacy-link {
+    color: #4d5ae5;
+}
+
 .contact-form-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: block;
     min-width: 169px;
     height: 56px;
     margin: 0 auto;
