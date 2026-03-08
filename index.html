@@ -513,5 +513,88 @@
         </div>
       </div>
     </footer>
+
+    <!-- Modal -->
+    <div class="modal-overlay">
+      <div class="modal">
+        <form class="contacts-form">
+          <button class="close-btn"
+          type="button">
+            <svg width="8" height="8">
+              <use href="./images/icons.svg#exit"></use>
+            </svg>
+          </button>
+          <p class="contanct-form-title">
+            Leave your contacts and we will call you back
+          </p>
+          
+          <label>
+            <div class="form-group">
+              <label class="modal-label" for="name">Name</label>
+              <div class="modal-input-wrapper">
+                <input
+                  class="modal-input"
+                  type="text"
+                  name="name"
+                  id="user"
+                  placeholder=""
+                  required
+                />
+                <svg class="modal-input-icon" width="18" height="24">
+                  <use href="./images/icons.svg#user"></use>
+                </svg>
+              </div>
+            </div>
+          </label>
+
+          <label>
+            <div class="form-group">
+              <label class="modal-label" for="phone">Phone</label>
+              <div class="modal-input-wrapper">
+                <input
+                  class="modal-input"
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  placeholder=""
+                  required
+                />
+                <svg class="modal-input-icon" width="18" height="24">
+                  <use href="./images/icons.svg#tel"></use>
+                </svg>
+              </div>
+            </div>
+          </label>
+
+          <label>
+            <div class="form-group">
+              <label class="modal-label" for="email">Email</label>
+              <div class="modal-input-wrapper">
+                <input
+                  class="modal-input"
+                  type="email"
+                  name="email"
+                  id="mail"
+                  placeholder=""
+                  required
+                />
+                <svg class="modal-input-icon" width="18" height="24">
+                  <use href="./images/icons.svg#mail"></use>
+                </svg>
+              </div>
+            </div>
+
+          <label class="modal-label" for="textarea">Comment</label>
+          <textarea name="comment" id="textarea" placeholder="Text input"></textarea>
+          <label>
+              <input type="checkbox" name="agreement" id="agreement" required />
+              <span class="checkbox-custom"></span>
+              <span>I accept the terms and conditions of the</span>
+              <a href="">Privacy Policy</a>
+          </label>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
