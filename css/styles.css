@@ -758,16 +758,16 @@ box-shadow:
     margin-bottom: 24px;
 }
 
-.modal-checkbox {
+.modal-checkbox-label {
     display: flex;
     align-items: center;
     gap: 8px;
-    cursor: pointer;
     font-weight: 400;
     font-size: 12px;
-    line-height: 117%;
+    line-height: 1.17;
     letter-spacing: 0.04em;
     color: #8e8f99;
+    cursor: pointer;
 }
 
 .modal-checkbox-custom {
