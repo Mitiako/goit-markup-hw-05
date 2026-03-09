@@ -498,15 +498,15 @@ box-shadow:
     background-color: #2e2f42;
 }
 
-/* Ліва колонка футера: містить логотип і текст, має правий відступ для відділення від соцмереж */
-.info-wrapper {
-    margin-right: 120px;
-}
-
 /* Головний контейнер футера: розташовує дві колонки в один ряд і вирівнює їх по базовій лінії тексту */
 .footer-container {
     display: flex;
     align-items: baseline;
+}
+
+/* Ліва колонка футера: містить логотип і текст, має правий відступ для відділення від соцмереж */
+.info-wrapper {
+    margin-right: 120px;
 }
 
 /* Логотип футера: стилізований текстовий бренд з нижнім відступом */
@@ -528,6 +528,21 @@ box-shadow:
     color: #f4f4fd;
 }
 
+/* Описова фраза під логотипом: світлий текст з комфортною шириною для читання */
+.footer-text {
+    max-width: 264px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #f4f4fd;
+}
+
+/* Права колонка футера: вертикальний контейнер для заголовка і списку соцмереж */
+.social-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-right: 80px;
+}
+
 /* Заголовок блоку соцмереж: напівжирний білий текст з нижнім відступом */
 .social-title {
     font-weight: 500;
@@ -538,34 +553,10 @@ box-shadow:
     margin-bottom: 16px;
 }
 
-/* Окремий елемент списку соцмереж: квадрат 40×40 для круглої кнопки */
-.social-item {
-    width: 40px;
-    height: 40px;
-}
-
-/* Описова фраза під логотипом: світлий текст з комфортною шириною для читання */
-.footer-text {
-        max-width: 264px;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
-        color: #f4f4fd;
-}
-
 /* Список соцмереж: горизонтальне розташування іконок з рівними проміжками */
 .social-list {
     display: flex;
     gap: 16px;
-}
-
-.team-web {
-    fill: #f4f4fd;
-}
-
-/* Права колонка футера: вертикальний контейнер для заголовка і списку соцмереж */
-.social-wrapper {
-    display: flex;
-    flex-direction: column;
 }
 
 /* Кнопка соцмережі: кругла, синя, з центруванням іконки та плавною зміною кольору при наведенні */
@@ -580,20 +571,88 @@ box-shadow:
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* SVG-іконка соцмережі: білий колір через fill і розмір 24×24 */
-.social-icon {
-    fill: #f4f4fd;
-}
-
-/* Зміна кольору кнопки соцмережі при наведенні або фокусі */
 .social-icon:hover,
 .social-icon:focus {
     background-color: #31d0aa;
 }
 
-/* ================================
-   BACKDROP & MODAL
-   ================================ */
+
+/* Subscribe form (Footer) */
+
+.subscribe-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.subscribe-title {
+    margin-bottom: 16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #fff;
+}
+
+.subscribe-form {
+    display: flex;
+    gap: 24px;
+}
+
+.subscribe-label {
+    display: flex;
+}
+
+.subscribe-input {
+    width: 264px;
+    height: 40px;
+    padding-left: 16px;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    background: transparent;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+}
+
+.subscribe-input::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 200%;
+    letter-spacing: 0.04em;
+    color: #fff;
+}
+
+.subscribe-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 165px;
+    height: 40px;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #fff;
+    cursor: pointer;
+    background: #4d5ae5;    
+    border: none;
+    border-radius: 4px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);}
+
+.subscribe-btn:hover,
+.subscribe-btn:focus {
+    background-color: #31d0aa;
+}
+
+.subscribe-icon {
+    margin-left: 16px;
+    fill: #fff;
+}
+
+
+/* BACKDROP & MODAL */
 
 .modal-overlay {
     position: fixed;
@@ -611,18 +670,17 @@ box-shadow:
 
 .modal-overlay.is-open {
     opacity: 1;
-    
+    visibility: visible;
     pointer-events: auto;
-    /* visibility: visible; */
 }
 
 .modal {
     position: absolute;
     top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%);
     width: 408px;
     min-height: 584px;
-    transform: translate(-50%, -50%);
     background-color: #fcfcfc;
     padding: 72px 24px 24px;
     border-radius: 4px;
@@ -643,19 +701,13 @@ box-shadow:
     align-items: center;
     width: 24px;
     height: 24px;
-
+    padding: 0;
+    cursor: pointer;
     background-color: #e7e9fc;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
-    padding: 0;
-    cursor: pointer;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
         border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.close-btn>svg {
-    fill: #2e2f42;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-btn:hover,
@@ -664,10 +716,22 @@ box-shadow:
     border: none;
 }
 
+.close-btn>svg {
+    fill: #2e2f42;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .close-btn:hover>svg,
 .close-btn:focus>svg {
     fill: #fff;
 }
+
+.close-btn:hover,
+.close-btn:focus {
+    fill: #404bbf;
+}
+
+/* Modal form-title */
 
 .contact-form-title {
     margin-bottom: 16px;
@@ -678,6 +742,9 @@ box-shadow:
     text-align: center;
     color: #2e2f42;
 }
+
+
+/* Modal form */
 
 .form-group {
     margin-bottom: 8px;
@@ -693,7 +760,6 @@ box-shadow:
     color: #8e8f99;
 }
 
-
 .modal-input-wrapper {
     position: relative;
 }
@@ -705,6 +771,9 @@ box-shadow:
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
     outline: transparent;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
     background-color: transparent;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -744,19 +813,19 @@ box-shadow:
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.modal-textarea::placeholder {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
+}
+
 .modal-textarea:focus {
     border-color: #4d5ae5;
 }
 
-.modal-textarea,
-.modal-input,
-.modal-textarea::placeholder {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 117%;
-    letter-spacing: 0.04em;
-    color: rgba(46, 47, 66, 0.4);
-}
+
+/* Checkbox */
 
 .modal-checkbox-wrap {
     margin-bottom: 24px;
@@ -772,6 +841,16 @@ box-shadow:
     letter-spacing: 0.04em;
     color: #8e8f99;
     cursor: pointer;
+}
+
+.modal-textarea,
+.modal-input,
+.modal-textarea::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 117%;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
 }
 
 .modal-checkbox-custom {
@@ -805,16 +884,15 @@ box-shadow:
     fill: #f4f4fd;
 }
 
-.privacy-link {
-    color: #4d5ae5;
-}
-
-.agreement-link {
+.modal-policy-link {
     line-height: 1.33333;
     text-decoration: underline;
     text-decoration-skip-ink: none;
     color: #4d5ae5;
 }
+
+
+/* Modal submit btn */
 
 .contact-form-btn {
     display: block;
@@ -843,27 +921,3 @@ box-shadow:
 }
 
 
-.subscribe-title {
-    margin-bottom: 16px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #fff;
-}
-
-.subscribe-form {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-}
-
-.subscribe-input {
-    width: 264px;
-    height: 40px;
-
-    border: 1px solid #fff;
-    border-radius: 4px;
-
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-}
