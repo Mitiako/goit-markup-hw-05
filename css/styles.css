@@ -760,7 +760,7 @@ fill: #fff;
     color: #8e8f99;
 }
 
-.checkbox-wrapper {
+span.checkbox-wrapper {
     display: inline-flex;
     align-items: center;
     justify-content: center;
