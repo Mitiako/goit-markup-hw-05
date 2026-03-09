@@ -609,7 +609,7 @@ box-shadow:
     font-size: 12px;
     line-height: 2;
     letter-spacing: 0.04em;
-    border: 1px solid #fff;
+    border: 1px solid #ffffff;
     border-radius: 4px;
     background: transparent;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
@@ -620,7 +620,7 @@ box-shadow:
     font-size: 12px;
     line-height: 200%;
     letter-spacing: 0.04em;
-    color: #fff;
+    color: #ffffff;
 }
 
 .subscribe-btn {
