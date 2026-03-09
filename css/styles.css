@@ -754,7 +754,7 @@ box-shadow:
     color: rgba(46, 47, 66, 0.4);
 }
 
-.agreement-wrapper {
+.modal-checkbox-wrap {
     margin-bottom: 24px;
 }
 
@@ -770,7 +770,7 @@ box-shadow:
     color: #8e8f99;
 }
 
-.checkbox-wrapper {
+.modal-checkbox-custom {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -785,19 +785,19 @@ box-shadow:
         fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.checkbox-icon {
+.modal-checkbox-icon {
     fill: transparent;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
-.checkbox-input:checked+.modal-checkbox>.checkbox-wrapper {
+.modal-checkbox-input:checked+.modal-checkbox-label .modal-checkbox-custom {
     background-color: #404bbf;
     border: none;
     fill: #f4f4fd;
 }
 
-.checkbox-input:checked+.modal-checkbox .checkbox-icon {
+.modal-checkbox-input:checked+.modal-checkbox-label .modal-checkbox-icon {
     fill: #f4f4fd;
 }
 
