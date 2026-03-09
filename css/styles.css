@@ -832,7 +832,6 @@ box-shadow:
 }
 
 .modal-checkbox-label {
-    display: flex;
     align-items: center;
     gap: 8px;
     font-weight: 400;
